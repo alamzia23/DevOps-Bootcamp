@@ -28,9 +28,13 @@ rm:- it is the command which is used to delete a file.for ex:- rm text.txt
 
 
 
-Vi is a powerful and versatile text editor originally created for the Unix operating system. Basically there are two modes of the VI editor i) command line mode ii)insert mode
+Vi is a powerful and versatile text editor originally created for the Unix operating system.
+
+Basically there are two modes of the VI editor:-
+i) command line mode ii)insert mode
+
 Basic navigation: h, j, k, l (left, down, up, right), w, b (move by words), 0 (go to beginning of line), $ (go to end of line).
-Deleting: x (delete current character), dd (delete current line), d<motion> (delete text using a motion like w for word).
+Deleting: x (delete current character), dd (delete current line).
 Copying and pasting: yy (copy current line), p (paste after), x (cut and paste).
 Searching: /pattern (search for pattern), n (go to next match).
 Saving and exiting: :wq (save and quit), :q! (quit without saving).
@@ -39,11 +43,12 @@ to find something in the vi editor use the /of command and to move on the occure
 
 MOre Linux Commands:-
 whoami :-it tells about the user name 
-id :-the ID command gives you more information about the user,such as the user ID, which happens to xxyyzz and the group id , the id od the group which the use is the part of.
+id :-the ID command gives you more information about the user,such as the user ID, which happens to xxyyzz and the group id , the id od the group which the use 
+is the part of.
 
 su:- to switch from the one user to another user use the su command
-The su command stands for 'switch user' or the 'substitue user' allows you to temporarily switch from your current user account  to another account on a Linux System.
-it is basically used when you need to perform some task that needs the root user 
+The su command stands for 'switch user' or the 'substitue user' allows you to temporarily switch from your current user account  to another account on a Linux 
+System.it is basically used when you need to perform some task that needs the root user .
 
 Basic usage:
 
@@ -53,18 +58,18 @@ You will be prompted to enter the password for the target user account.
 if no username is provided then the su will automatically switch to the root user.(root user has no restriction on the system)
 
 sudo:-
-The sudo command in Linux allows you to execute commands with the privileges of another user, typically the root (superuser) account, without actually logging in as that user. 
-This is a more secure and controlled way to grant temporary elevated access compared to using the su command directly.
-When you use the sudo command, you're not directly interacting with the root user or asking for their permission. Instead, you're invoking a system of pre-defined rules that determine 
+The sudo command in Linux allows you to execute commands with the privileges of another user, typically the root (superuser) account, without actually logging in 
+as that user. This is a more secure and controlled way to grant temporary elevated access compared to using the su command directly.When you use the sudo command, 
+you're not directly interacting with the root user or asking for their permission. Instead, you're invoking a system of pre-defined rules that determine 
 your access based on several factors:
 i)your user account
 ii)The specific command 
 iii)
-In the world of sudo, the /etc/sudoers file holds immense power. It acts as the rulebook, dictating who can use sudo, what they can do with it, and under what conditions. 
-Think of it as a gatekeeper guarding the elevated privileges of the root user.
+In the world of sudo, the /etc/sudoers file holds immense power. It acts as the rulebook, dictating who can use sudo, what they can do with it, and under what 
+conditions. Think of it as a gatekeeper guarding the elevated privileges of the root user.
 
-The particular command you're trying to run with sudo matters. The /etc/sudoers file can specify which commands each user is allowed to use with sudo. So, even if you have general sudo privileges, 
-it doesn't mean you can use it for absolutely everything.
+The particular command you're trying to run with sudo matters. The /etc/sudoers file can specify which commands each user is allowed to use with sudo. So, even if 
+you have general sudo privileges, it doesn't mean you can use it for absolutely everything.
 
 Curl :- If you want to download some data from the internet directly from the terminal, so we use the curl command.
 for ex:- curl https://www.downloadData.com/somefile.txt
@@ -75,7 +80,6 @@ file name(where the data will be stored)
 
 wget :- this command is also used to download the data from the internet like the curl command and it also has the feature of the -O option to save the downloaded data in separate file.
 for ex :-wget https://www.downloadData.com/somefile.txt -O somefile.txt(name of the file where you want to save the downloaded data)
-
 
 To check the OS versions:-
 i)cat /etc/*release*
