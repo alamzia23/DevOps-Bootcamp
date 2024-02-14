@@ -64,6 +64,35 @@ To configure a program as a service, you create a systemd unit file (e.g., myapp
 command to run your program. Reload systemd (systemctl daemon-reload), then start your service (systemctl start myapp). You can also enable it to start at boot with
 systemctl enable myapp.
 
+
+Breaking down the above lines into four key steps:
+
+1. Create a systemd unit file:
+
+myapp.service is the name of the unit file you'll create. It defines the behavior of your service, including the program to run and other settings.
+/etc/systemd/system/ is the standard directory where systemd stores unit files.
+
+2. Define the service command:
+
+Inside the unit file, look for a section called [Service].
+Within this section, find the line ExecStart= or Command=. This line specifies the exact command to be executed when the service starts.
+In your example, it mentions replacing <command> with the actual command you want to run for your program. Be sure to use the full path to the executable or script.
+
+3. Reload systemd:
+
+systemctl daemon-reload, tells systemd to reload its configuration files, including your newly created unit file.
+This step is crucial for systemd to recognize your new service.
+
+4. Start the service:
+
+systemctl start myapp, starts your service using the name specified in the unit file (here, "myapp").
+This command launches your program as a background process, allowing it to run continuously.
+
+5. (Optional) Enable automatic startup:
+
+systemctl enable myapp, configures your service to start automatically at boot time.
+This ensures your program starts whenever the system restarts, ensuring continuous operation.
+
 Service Unit File Sections:
 
 [Unit]: Provides metadata like service description.
